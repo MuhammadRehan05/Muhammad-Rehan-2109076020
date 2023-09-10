@@ -1,0 +1,21 @@
+def rearrange_even_odd(angka):
+    if len(angka) <= 1:
+        return angka
+
+    # Separate even and odd elements
+    even = []
+    odd = []
+    
+    for num in angka:
+        if num % 2 == 0:
+            even.append(num)
+        else:
+            odd.append(num)
+
+    # Concatenate even and odd sub-sequences
+    return even + odd
+
+# Penggunaan Fungsi
+sequence = [4, 2, 7, 1, 9, 6, 3, 8, 5, 10]
+result = rearrange_even_odd(sequence)
+print(result)
